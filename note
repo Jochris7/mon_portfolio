@@ -1,0 +1,25 @@
+mon_portfolio/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx                  → Le "desktop" Ubuntu
+│   └── globals.css               → Variables Ubuntu (couleurs, fonts)
+├── components/
+│   ├── desktop/
+│   │   ├── TopBar.tsx            → Barre du haut (Activities, horloge, status)
+│   │   ├── Dock.tsx              → Dock gauche avec les apps
+│   │   ├── Desktop.tsx           → Container principal + wallpaper
+│   │   └── DesktopIcons.tsx      → Icônes sur le bureau (martin, corbeille…)
+│   ├── window/
+│   │   ├── Window.tsx            → Composant fenêtre générique (drag, resize, close)
+│   │   └── WindowManager.tsx     → Gère les z-index, fenêtres ouvertes
+│   └── apps/
+│       ├── FilesApp.tsx          → Nautilus-like pour "À propos"
+│       ├── TerminalApp.tsx       → Terminal pour skills/commandes fun
+│       ├── FirefoxApp.tsx        → Navigateur fake pour projets
+│       └── ...
+├── lib/
+│   ├── store.ts                  → Zustand pour l'état des fenêtres
+│   └── apps-config.ts            → Liste des apps et leur contenu
+└── public/
+    ├── wallpapers/               → Le wallpaper Jammy Jellyfish
+    └── icons/                    → Icônes Yaru (thème Ubuntu)

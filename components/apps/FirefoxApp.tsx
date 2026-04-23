@@ -16,28 +16,63 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    name: "Babi-Services",
-    emoji: "🔨",
-    color: "from-orange-500 to-amber-600",
-    tagline: "Marketplace d'artisans pour Abidjan",
-    tags: ["React Native", "IA Matching", "GPS", "Freemium"],
-    description: "Application mobile de services à domicile avec matching par IA, suivi GPS en temps réel, système de badges/réputation, négociation de prix in-app (style InDrive), et boutique de fournitures intégrée.",
+    name: "Linux Sysadmin Labs",
+    emoji: "🐧",
+    color: "from-gray-800 to-gray-950",
+    tagline: "Série de labs d'administration système Linux",
+    tags: ["Bash", "Linux", "ACL", "Scripting", "Sysadmin"],
+    description:
+      "Série de 4 labs couvrant l'administration système Linux : création d'utilisateurs en masse via CSV, toolkit de support interactif (monitoring CPU/RAM, services, backups), gestion des permissions Unix et ACL avec simulation d'un environnement d'entreprise multi-groupes.",
+    link: "https://github.com/Jochris7/linux-sysadmin-labs-2",
   },
   {
-    name: "VTC Control",
-    emoji: "🚗",
-    color: "from-blue-600 to-indigo-700",
-    tagline: "Gestion de flotte VTC en Afrique",
-    tags: ["Fleet", "Tracking", "B2B"],
-    description: "Solution de gestion et tracking pour opérateurs de véhicules VTC. Cible : flottes existantes comme Africab, Yango CI, Heetch CI.",
+    name: "Chatbot Gemini",
+    emoji: "🤖",
+    color: "from-blue-500 to-indigo-600",
+    tagline: "Chatbot IA via l'API Gemini — Nest.js",
+    tags: ["Nest.js", "TypeScript", "Gemini API", "IA"],
+    description:
+      "Chatbot conversationnel intégrant l'API Gemini de Google. Backend construit avec Nest.js et TypeScript, gestion du contexte de conversation, endpoints REST pour l'échange de messages.",
+    link: "https://github.com/Jochris7/chatbotBackend",
   },
   {
-    name: "Fondation AULINE",
-    emoji: "💜",
-    color: "from-purple-600 to-pink-600",
-    tagline: "Communication digitale — ONG",
-    tags: ["Content", "Design", "Social Media"],
-    description: "Support de la communication de la fondation sur les thèmes santé maternelle/infantile, éducation et autonomisation des jeunes filles vulnérables. Contenus basés sur le rapport OECD 2026.",
+    name: "Colonie de Vacances",
+    emoji: "🏕️",
+    color: "from-emerald-500 to-teal-600",
+    tagline: "Plateforme de réservation en ligne",
+    tags: ["Next.js", "TypeScript", "Paiement", "En cours 🚧"],
+    description:
+      "Plateforme web pour une agence de colonies de vacances : présentation des séjours, réservation en ligne, paiement intégré, et dashboard admin pour gérer les voyages, réservations et clients.",
+    link: "https://github.com/Jochris7/SunCamp",
+  },
+  {
+    name: "Agrofields",
+    emoji: "🌾",
+    color: "from-green-600 to-lime-500",
+    tagline: "App mobile AgriTech — Stage",
+    tags: ["React Native", "Expo", "Socket.IO", "PayDunya"],
+    description:
+      "Stage chez Agrofields (Mai–Juillet 2025) : développement frontend mobile en React Native/Expo, intégration d'appels API REST, temps réel avec Socket.IO et paiement mobile via PayDunya.",
+  },
+  {
+    name: "Orange Summer Challenge",
+    emoji: "🏆",
+    color: "from-orange-400 to-orange-600",
+    tagline: "IoT Mobile + CTF AWS · 4ème / 20 pays",
+    tags: ["React Native", "IoT", "AWS", "CTF", "WebSocket"],
+    description:
+      "Stage Orange (Août–Novembre 2025) : conception d'une app mobile IoT pour visualiser des données capteurs en temps réel. Participation au CTF AWS — classé 4ème sur 20 pays participants sur des défis EC2, S3 et RDS.",
+    link: "https://www.figma.com/proto/0We8nBJfCcmtDNpiH88bLP/Fermen-innov?node-id=26-1423&t=4xhF2J58D6y9sbbb-1",
+  },
+  {
+    name: "ML Foodtruck",
+    emoji: "📊",
+    color: "from-yellow-400 to-amber-500",
+    tagline: "Régression linéaire — Machine Learning",
+    tags: ["Python", "Pandas", "Matplotlib", "Jupyter", "ML"],
+    description:
+      "Premier modèle ML : régression linéaire pour prédire les bénéfices d'un food truck selon la population d'une ville. Exercice fondateur en Data Science avec visualisation des résultats.",
+    link: "https://github.com/Jochris7/ML-foodtruck",
   },
 ];
 

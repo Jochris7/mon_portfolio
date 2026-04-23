@@ -20,7 +20,6 @@ interface OldProject {
   liveUrl?: string;     // lien démo — à remplir
 }
 
-// ─── Données — AJOUTE / MODIFIE ICI ──────────────────────────────────────────
 const OLD_PROJECTS: OldProject[] = [
   {
     key: "proj1",
@@ -33,7 +32,7 @@ const OLD_PROJECTS: OldProject[] = [
       "Mon premier vrai projet React. J'avais aucune idée de ce que je faisais — mais j'ai tenu jusqu'au bout.",
     description:
       "Application web interactive permettant à deux joueurs de s'affronter sur un plateau de dames. Gestion des règles, des déplacements et des captures.",
-    videoUrl: "", // ← colle ton lien vidéo ici
+    videoUrl: "/videos/jeu-dame-Cz12M9TN.mkv",
     githubUrl: "https://github.com/Jochris7/jeu-dame",
   },
   {
@@ -47,7 +46,7 @@ const OLD_PROJECTS: OldProject[] = [
       "Ma première fois avec la stack MERN. J'ai compris ce que voulait dire 'full-stack' pour de vrai — et c'était douloureux.",
     description:
       "Application de gestion de bibliothèque numérique : ajout, modification, suppression et consultation de livres. Premier contact sérieux avec une API REST.",
-    videoUrl: "", // ← colle ton lien vidéo ici
+    videoUrl: "/videos/crud-bibliotheque-DxXioivF.mkv",
     githubUrl: "https://github.com/Jochris7/CRUD-bibliotheque",
   },
   {
@@ -61,7 +60,7 @@ const OLD_PROJECTS: OldProject[] = [
       "J'avais découvert Chart.js et je voulais mettre des graphiques partout. Résultat : un dashboard avec trop de couleurs et trop de données.",
     description:
       "Dashboard de visualisation de données avec graphiques interactifs (barres, lignes, camemberts). Présentation visuelle de KPIs fictifs.",
-    videoUrl: "", // ← colle ton lien vidéo ici
+    videoUrl: "/videos/dashboard-xYJJWqLG.mkv",
     githubUrl: "https://github.com/Jochris7/dashborad-1-static-",
   },
   {
@@ -75,7 +74,7 @@ const OLD_PROJECTS: OldProject[] = [
       "PHP, MySQL, et DOM vanilla — l'ancienne école. Aujourd'hui je frissonne en relisant ce code. Mais ça fonctionnait.",
     description:
       "Jeu interactif du Baccalauréat : les joueurs remplissent des catégories (noms, villes, animaux…) selon une lettre tirée au hasard. Gestion des scores et du timer.",
-    videoUrl: "", // ← colle ton lien vidéo ici
+    videoUrl: "/videos/baccalaureat-BSPfM9AG.mkv",
     githubUrl: "https://github.com/Jochris7/jeu-baccalaur-at",
   },
   {
@@ -89,7 +88,7 @@ const OLD_PROJECTS: OldProject[] = [
       "Tout dev mobile a cloné WhatsApp au moins une fois. C'était mon tour. Je voulais comprendre comment ils gèrent l'UI des chats.",
     description:
       "Réplique de l'interface utilisateur de WhatsApp : liste de conversations, bulles de messages, barre de navigation. Front-end uniquement.",
-    videoUrl: "", // ← colle ton lien vidéo ici
+    videoUrl: "",
     githubUrl: "https://github.com/Jochris7/clone-WhatsApp-front-end-mobile",
   },
   {
@@ -103,12 +102,11 @@ const OLD_PROJECTS: OldProject[] = [
       "Mon premier modèle ML. Une régression linéaire pour prédire les bénéfices d'un food truck. Simple — mais c'est là que j'ai chopé le virus du Machine Learning.",
     description:
       "Implémentation d'une régression linéaire pour prédire les bénéfices d'un Food Truck selon la population d'une ville. Exercice fondateur en Data Science.",
-    videoUrl: "", // ← colle ton lien vidéo ici
+    videoUrl: "",
     githubUrl: "https://github.com/Jochris7/ML-foodtruck",
   },
 ];
 
-// ─── Composant carte projet ───────────────────────────────────────────────────
 function ProjectCard({ project }: { project: OldProject }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -205,7 +203,6 @@ function ProjectCard({ project }: { project: OldProject }) {
   );
 }
 
-// ─── Fenêtre principale Corbeille ─────────────────────────────────────────────
 export default function TrashApp() {
   return (
     <Window id="trash" title="Corbeille" width={860} height={580}>

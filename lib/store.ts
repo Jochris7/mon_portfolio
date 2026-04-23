@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
-export type AppId = "files" | "terminal" | "firefox" | "mail";
+
+export type AppId = "files" | "terminal" | "firefox" | "mail" | "trash";
 
 interface WindowState {
   openApps: AppId[];

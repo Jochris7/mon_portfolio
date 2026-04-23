@@ -8,10 +8,8 @@ interface WindowProps {
   id: AppId;
   title: string;
   children: React.ReactNode;
-  /** Width in px for desktop, auto on mobile */
   width?: number;
   height?: number;
-  /** Dark titlebar (Terminal) */
   darkTitlebar?: boolean;
 }
 
@@ -19,6 +17,7 @@ export default function Window({ id, title, children, width = 900, height = 560,
   const { closeApp, focusApp, zOrder } = useWindowStore();
   const zIndex = 20 + zOrder.indexOf(id);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -27,13 +26,15 @@ export default function Window({ id, title, children, width = 900, height = 560,
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  const style: React.CSSProperties = isMobile
+  const style: React.CSSProperties = isMaximized
+    ? { top: 32, left: 64, right: 0, bottom: 0, zIndex }
+    : isMobile
     ? { top: 40, left: 8, right: 8, bottom: 8, zIndex }
     : {
         width,
         height,
         top: "50%",
-        left: "calc(50% + 32px)", // offset for dock
+        left: "calc(50% + 32px)",
         transform: "translate(-50%, -50%)",
         zIndex,
       };
@@ -42,7 +43,7 @@ export default function Window({ id, title, children, width = 900, height = 560,
     <div
       onMouseDown={() => focusApp(id)}
       style={style}
-      className="absolute window-open rounded-xl overflow-hidden shadow-2xl flex flex-col bg-white"
+      className="absolute window-open rounded-xl overflow-hidden shadow-2xl flex flex-col bg-white transition-all duration-200"
     >
       {/* Titlebar */}
       <div
@@ -51,7 +52,12 @@ export default function Window({ id, title, children, width = 900, height = 560,
         } border-b ${darkTitlebar ? "border-black/30" : "border-[#D4D0CD]"}`}
       >
         <div className="w-20" />
-        <div className="text-sm font-medium truncate">{title}</div>
+        <div
+          className="text-sm font-medium truncate cursor-pointer select-none"
+          onDoubleClick={() => setIsMaximized((v) => !v)}
+        >
+          {title}
+        </div>
         <div className="flex items-center gap-2">
           <button
             title="Minimize"
@@ -63,6 +69,7 @@ export default function Window({ id, title, children, width = 900, height = 560,
           </button>
           <button
             title="Maximize"
+            onClick={() => setIsMaximized((v) => !v)}
             className={`w-6 h-6 rounded-full flex items-center justify-center ${
               darkTitlebar ? "bg-white/10 hover:bg-white/20" : "bg-black/5 hover:bg-black/10"
             }`}

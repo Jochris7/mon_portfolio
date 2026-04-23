@@ -17,7 +17,11 @@ export default function DesktopIcons() {
         <span className="text-white text-xs text-center drop-shadow">Johan</span>
       </button>
 
-      <button className="flex flex-col items-center gap-1 p-2 rounded hover:bg-white/10 transition w-20">
+      <button
+        onDoubleClick={() => openApp("trash")}
+        onClick={() => openApp("trash")}
+        className="flex flex-col items-center gap-1 p-2 rounded hover:bg-white/10 transition w-20"
+      >
         <div className="w-11 h-11 rounded-full bg-[#E95420] flex items-center justify-center">
           <Trash2 size={24} color="white" />
         </div>

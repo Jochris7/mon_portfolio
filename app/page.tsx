@@ -7,6 +7,7 @@ import FilesApp from "@/components/apps/FilesApp";
 import TerminalApp from "@/components/apps/TerminalApp";
 import FirefoxApp from "@/components/apps/FirefoxApp";
 import MailApp from "@/components/apps/MailApp";
+import TrashApp from "@/components/apps/TrashApp";
 import { useWindowStore } from "@/lib/store";
 import { useEffect } from "react";
 
@@ -43,6 +44,7 @@ export default function Home() {
       {openApps.includes("terminal") && <TerminalApp />}
       {openApps.includes("firefox") && <FirefoxApp />}
       {openApps.includes("mail") && <MailApp />}
+      {openApps.includes("trash") && <TrashApp />}
     </main>
   );
 }

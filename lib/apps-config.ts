@@ -1,4 +1,4 @@
-import { Folder, Terminal, Globe, Mail } from "lucide-react";
+import { Folder, Terminal, Globe, Mail, Trash2 } from "lucide-react";
 import type { AppId } from "./store";
 import type { LucideIcon } from "lucide-react";
 
@@ -54,6 +54,15 @@ export const APPS: AppConfig[] = [
     iconBgClass: "bg-blue-600",
     width: 880,
     height: 560,
+  },
+    {
+    id: "trash",
+    label: "Corbeille — Anciens projets",
+    windowTitle: "Corbeille",
+    icon: Trash2,
+    iconBgClass: "bg-[#E95420]",
+    width: 860,
+    height: 580,
   },
 ];
 

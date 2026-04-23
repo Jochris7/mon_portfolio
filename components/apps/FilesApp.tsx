@@ -13,7 +13,6 @@ const SIDEBAR = [
   { icon: Music, label: "Music" },
   { icon: ImageIcon, label: "Pictures" },
   { icon: Video, label: "Videos" },
-  { icon: Trash2, label: "Rubbish Bin" },
 ];
 
 const FILES = [
@@ -30,7 +29,7 @@ const CONTENT: Record<string, { title: string; body: React.ReactNode }> = {
       <div className="space-y-4 text-sm leading-relaxed text-gray-700">
         <h2 className="text-2xl font-bold text-[#77216F] mb-4"># Salut ! 👋</h2>
         <p>
-          Moi c’est <strong>Johan Chris Junior Kpouelde</strong> (aka Ledjo Johan), étudiant en 3e année d’ingénierie informatique à l’ENSIT, basé à Abidjan.
+          Moi c’est <strong>Johan Chris Junior Kpoulede</strong> (aka Ledjo Johan), étudiant en 3e année d’ingénierie informatique à l’ENSIT, basé à Abidjan.
         </p>
         <p>
           Je ne me contente pas de "pisser du code" : ce qui m'anime, c'est l'<strong>architecture logicielle et le System Design</strong>. Je cherche constamment à passer du statut de simple codeur à celui de concepteur de systèmes robustes, scalables et modulaires.
@@ -86,10 +85,7 @@ const CONTENT: Record<string, { title: string; body: React.ReactNode }> = {
 
         <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
           <h3 className="font-bold text-gray-900">🏫 SmartCampus</h3>
-          <p className="mt-1">SmartCampus est une solution logicielle robuste conçue pour centraliser et automatiser l'écosystème d'un établissement scolaire. Le projet répond au défi de la fluidité de l'information entre les différents acteurs de la vie académique. Points Forts Techniques & Fonctionnels
-          Architecture Multi-Tenancy & Rôles : Conception d'un système de permissions granulaire gérant trois interfaces distinctes (Étudiant, Professeur, Administration) garantissant la sécurité et la confidentialité des données.
-          Bibliothèque Numérique & Archives : Mise en place d'un module de gestion documentaire permettant l'archivage et la consultation d'anciens devoirs et sujets d'examens, facilitant la préparation aux évaluations.
-          Suivi Pédagogique en Temps Réel : Automatisation des relevés de notes, du suivi des absences et de la gestion des emplois du temps dynamiques.</p>
+          <p className="mt-1">SmartCampus est une solution logicielle robuste conçue pour centraliser et automatiser l'écosystème d'un établissement scolaire. Le projet répond au défi de la fluidité de l'information entre les différents acteurs de la vie académique. Conception d'un système de permissions granulaire gérant trois interfaces distinctes (Étudiant, Professeur, Administration) garantissant la sécurité et la confidentialité des données.</p>
         </div>
 
         <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
@@ -115,29 +111,43 @@ const CONTENT: Record<string, { title: string; body: React.ReactNode }> = {
           <li className="flex items-start gap-2">
             <span className="text-lg">⚙️</span>
             <div>
-              <strong className="text-gray-900">System Design :</strong> 
+              <strong className="text-gray-900">System Design :</strong>
               <p>Penser l'architecture globale, la modularité et la gestion des données avant d'écrire la première ligne de code.</p>
             </div>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-lg">🔐</span>
             <div>
-              <strong className="text-gray-900">Cybersécurité & Réseaux :</strong> 
+              <strong className="text-gray-900">Cybersécurité & Réseaux :</strong>
               <p>Passion pour le pentesting (Nmap, Metasploit) et les environnements Linux (Kali, Ubuntu).</p>
             </div>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-lg">📊</span>
             <div>
-              <strong className="text-gray-900">Data Science & ML :</strong> 
+              <strong className="text-gray-900">Data Science & ML :</strong>
               <p>Exploration de données avec Python (Pandas, Matplotlib) pour intégrer progressivement de l'intelligence artificielle dans mes projets.</p>
             </div>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-lg">🌍</span>
             <div>
-              <strong className="text-gray-900">Tech for Africa :</strong> 
+              <strong className="text-gray-900">Tech for Africa :</strong>
               <p>Développer des solutions locales, comme dans l'AgriTech, qui ont un impact réel sur l'écosystème africain.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-lg">📚</span>
+            <div>
+              <strong className="text-gray-900">Lecture :</strong>
+              <p>Passionné par les livres de développement personnel et d'entrepreneuriat — <em>Atomic Habits</em> m'a notamment aidé à ancrer de bonnes habitudes et à me défaire des anciennes, renforçant ainsi ma discipline au quotidien.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-lg">🏀</span>
+            <div>
+              <strong className="text-gray-900">Basketball :</strong>
+              <p>Le basket est mon sport de prédilection : il me permet de rester en forme, de développer l'esprit d'équipe et de décompresser après de longues sessions de code.</p>
             </div>
           </li>
         </ul>

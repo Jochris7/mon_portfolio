@@ -29,28 +29,42 @@ const COMMANDS: Record<string, () => React.ReactNode> = {
       </ul>
     </div>
   ),
-  whoami: () => <p>Johan — Développeur front-end basé à Abidjan 🇨🇮</p>,
+  whoami: () => (
+    <p>Johan Ledjo — Étudiant ingénieur & Développeur Fullstack basé à Abidjan 🇨🇮<br/>
+    Spécialisé en React · React Native · Next.js · Nest.js<br/>
+    Passionné par le Cloud (AWS), la cybersécurité , le Machine Learning et la Tech africaine.</p>
+  ),
   skills: () => (
     <div>
       <p className="text-[#F9F06B]">▓▓▓ Compétences ▓▓▓</p>
-      <p>Front : <span className="text-[#2A7BDE]">React · Next.js · TypeScript · Tailwind</span></p>
-      <p>Tools : <span className="text-[#2A7BDE]">Git · Figma · Vercel</span></p>
-      <p>Langues : <span className="text-[#2A7BDE]">Français · Anglais</span></p>
+      <p>Frontend : <span className="text-[#2A7BDE]">React.js · React Native · Next.js · TypeScript · Expo</span></p>
+      <p>Backend : <span className="text-[#2A7BDE]">Nest.js · Node.js · Express · PHP</span></p>
+      <p>Base de données : <span className="text-[#2A7BDE]">MySQL · MongoDB · Postgres </span></p>
+      <p>DevOps & Cloud : <span className="text-[#2A7BDE]">Docker · AWS (EC2 · S3 · RDS) · Linux · Vercel</span></p>
+      <p>Sécurité : <span className="text-[#2A7BDE]">CTF · Pentesting · Nmap · Metasploit · BurpSuite</span></p>
+      <p>Data & ML : <span className="text-[#2A7BDE]">Python · Pandas · Matplotlib  · seaborn · scikit learn</span></p>
+      <p>Tools : <span className="text-[#2A7BDE]">Git · GitHub · Figma · Socket.IO</span></p>
+      <p>Langues : <span className="text-[#2A7BDE]">Français (natif) · Anglais (B1/B2)</span></p>
     </div>
   ),
   stack: () => (
-    <pre className="text-[#2A7BDE]">{`┌─ Front-end  → React, Next.js 15, TypeScript
+    <pre className="text-[#2A7BDE]">{`┌─ Front-end  → Next.js · TypeScript · React.js
+├─ Mobile    → React Native · Expo
+├─ Back-end  → Nest.js · Node.js
+├─ Database  → MongoDB · MySQL · Postgres
+├─ DevOps    → Docker · AWS  (en apprentissage)
 ├─ Styling   → Tailwind CSS, Framer Motion
-├─ State     → Zustand, React Query
-└─ Backend   → Node.js, Supabase (en apprentissage)`}</pre>
+└─ Tools     → Git · Figma · Linux`}</pre>
   ),
   projects: () => (
     <div>
-      <p className="text-[#F9F06B]">📂 Projets récents :</p>
-      <p>• <strong>Babi-Services</strong> — Marketplace d'artisans (Abidjan)</p>
-      <p>• <strong>VTC Control</strong> — Gestion de flotte VTC</p>
-      <p>• <strong>Fondation AULINE</strong> — Communication digitale</p>
-      <p className="text-gray-400 italic">→ Ouvre Firefox pour voir les détails</p>
+      <div>
+        <p className="text-[#F9F06B]">📂 Projets :</p>
+        <p>• <strong>Linux Sysadmin Labs</strong> — Série de scripts Bash : gestion users, permissions ACL, toolkit support <span className="text-gray-400">[Linux · Bash]</span></p>
+        <p>• <strong>Chatbot Gemini</strong> — Chatbot IA intégré via l'API Gemini <span className="text-gray-400">[Nest.js · TypeScript]</span></p>
+        <p>• <strong>Colonie de Vacances</strong> — Plateforme de réservation & paiement en ligne <span className="text-gray-400">[Next.js · en cours 🚧]</span></p>
+        <p className="text-gray-400 text-sm mt-1">→ <span className="text-[#F9F06B]">github</span> pour voir les repos · <span className="text-[#F9F06B]">stack</span> pour les technos</p>
+      </div>
     </div>
   ),
   contact: () => (

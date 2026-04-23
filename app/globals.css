@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Ubuntu brand colors */
+  --ubuntu-orange: #E95420;
+  --ubuntu-orange-dark: #C7411B;
+  --ubuntu-purple: #2C001E;
+  --ubuntu-aubergine: #77216F;
+  --ubuntu-warm-grey: #AEA79F;
+  --ubuntu-cool-grey: #333333;
+
+  /* Yaru theme */
+  --yaru-window-bg: #FAFAFA;
+  --yaru-window-bg-dark: #242424;
+  --yaru-titlebar: #EBEBEB;
+  --yaru-titlebar-dark: #303030;
+  --yaru-border: #D4D0CD;
+  --yaru-sidebar: #F6F5F4;
+  --yaru-hover: #E5E5E5;
+
+  /* Topbar / Dock */
+  --shell-bg: rgba(0, 0, 0, 0.75);
+  --shell-text: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Ubuntu', 'Ubuntu Sans', system-ui, -apple-system, sans-serif;
+  background: var(--ubuntu-purple);
+  color: var(--ubuntu-cool-grey);
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Terminal font */
+.font-mono-terminal {
+  font-family: 'Ubuntu Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom scrollbar - Yaru style */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C0C0C0; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #A0A0A0; }
+
+/* Smooth window animations */
+@keyframes windowOpen {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
+.window-open { animation: windowOpen 0.18s ease-out; }
+
+/* Blinking cursor for terminal */
+@keyframes blink { 50% { opacity: 0; } }
+.terminal-cursor { animation: blink 1s step-end infinite; }
+
+/* Dock icon bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.dock-bounce { animation: bounce 0.4s ease-in-out; }
